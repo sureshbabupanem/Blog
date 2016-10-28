@@ -2,8 +2,8 @@
 
 one:
   post: one
-  body: MyString
+  body: MyText
 
 two:
   post: two
-  body: MyString
+  body: MyText

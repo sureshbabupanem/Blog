@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
+      <th><u>Title</u></th>
+      <td width="12"></td>
+      <th><u>Body</u></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +16,13 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
+          <td width="12"></td>
         <td><%= post.body %></td>
+          <td width="12"></td>
         <td><%= link_to 'Show', post %></td>
+        <td width="15"></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td width="15"></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -25,5 +30,7 @@
 </table>
 
 <br>
-
-<%= link_to 'New Post', new_post_path %>
+<br>
+<table class="btn btn-default btn-lg">
+<tr><td><%= link_to 'New Post', new_post_path %> </td> </tr>
+</table>
